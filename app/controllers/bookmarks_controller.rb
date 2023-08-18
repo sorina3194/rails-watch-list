@@ -23,12 +23,3 @@ class BookmarksController < ApplicationController
     params.require(:bookmark).permit(:comment)
   end
 end
-
-#def new
-# @list = List.find(params[:list_id])
-#end
-
-
-#then create a view new file in bookmarks and a form in it
-#simple_form_for [@list, @bookmarks]...
-#f.association :movie????

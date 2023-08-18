@@ -5,22 +5,21 @@
   <%= @list.name%>
 </p>
 
-
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <% @list.movies.each do |movie| %>
-      <div class="col-4">
-        <div class="card-title">
-            <h5 class="card-title"> <%= movie.title%></h5>
-            <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
-            <%= link_to "Delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "card-remove-link" %>
-
-      <%# <%= button_for "Delete Bookmark", bookmark %>
-        </div>
+<% @list.movies.each do |movie| %>
+  <div class="d-flex p-2">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+          <div class="col-4">
+            <div class="card-title">
+                <div class="card-title text-center size-10px"> <%= movie.title%></div>
+                <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+                <%= link_to "Delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "card-remove-link" %>
+            </div>
+          </div>
+        <p class="card-text">
+        </p>
       </div>
-    <% end %>
-    <p class="card-text">
-    </p>
+    </div>
   </div>
-</div>
+<% end %>
