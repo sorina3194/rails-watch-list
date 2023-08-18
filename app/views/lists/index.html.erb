@@ -1,0 +1,11 @@
+<nav class="navbar navbar-light p-2" style="background-color: #e3f2fd;">
+  <%= link_to "New List", new_list_path %>
+</nav>
+<h1 class="text-center">Movie lists</h1>
+<div class = "container"></div>
+    <% @lists.each do |list| %>
+      <p class="card m-2" >
+      <%= link_to list.name, list_path(list.id) %>
+    </p>
+    <% end %>
+</div>
