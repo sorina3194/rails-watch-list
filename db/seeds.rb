@@ -19,3 +19,14 @@ List.create(name: "Horror")
 List.create(name: "Romantic")
 List.create(name: "Blockbusters")
 List.create(name: "Marvel")
+
+
+
+10.times do
+  movie = Movie.create!(
+    title: Faker::Movie.title,
+    overview: Faker::Movie.quote,
+    poster_url:,
+    rating: rand(0..10)
+  )
+end

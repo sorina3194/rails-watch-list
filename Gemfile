@@ -50,6 +50,7 @@ gem "bootsnap", require: false
 
 group :development, :test do
   gem "dotenv-rails"
+  "CLOUDINARY_URL=cloudinary://162768976537739:28JEW3xezBX9etq_BQfeKdXz14U@dlccucjzm"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
@@ -71,3 +72,4 @@ gem "bootstrap", "~> 5.2"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
+gem "cloudinary"
